@@ -34,6 +34,9 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <script src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+        <script type="text/javascript" src="js/email.js"></script>
+
 
     </head>
     <body data-spy="scroll" data-offset="80">
@@ -184,21 +187,15 @@
         <section class="fun-facts parallax" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 margin-btm-30 text-center">
+                    <div class="col-md-6 margin-btm-30 text-center">
                         <div class="fact-inner">
-                            <h1 class="counter">3450</h1>
-                            <h3>Projects Complete</h3>
+                            <h1 class="counter">112</h1>
+                            <h3>Projects and counting</h3>
                         </div>
                     </div><!--facts col-->
-                    <div class="col-md-4 margin-btm-30 text-center">
+                    <div class="col-md-6 margin-btm-30 text-center">
                         <div class="fact-inner">
-                            <h1><span class="counter">345</span>+</h1>
-                            <h3>Happy Clients</h3>
-                        </div>
-                    </div><!--facts col-->
-                    <div class="col-md-4 margin-btm-30 text-center">
-                        <div class="fact-inner">
-                            <h1><span class="counter">6000</span></h1>
+                            <h1><span class="counter">17500</span>+</h1>
                             <h3>Working Hours</h3>
                         </div>
                     </div><!--facts col-->
@@ -502,7 +499,7 @@
                 <div class="divided-50"></div>
                 <div class="row contact-form">    
                     <div class="col-md-7 wow animated fadeInUp margin-btm-30"  data-wow-duration="700ms" data-wow-delay="300ms">
-                        <form role="form">
+                        <form role="form" name="inquiry_form">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="email" class="form-control" id="name" required="">
@@ -516,7 +513,8 @@
                                 <textarea class="form-control" rows="7" id="message" required=""></textarea>
                             </div> <div class="clearfix"></div>                     
                             <p class="text-right">
-                                <button type="submit" class="btn btn-theme btn-lg">Send Message</button>
+                                <button class="btn btn-theme btn-lg" onclick="sendTheMail(inquiry_form.email.value, inquiry_form.name.value, inquiry_form.message.value); return false;">Send Message</button>
+                                <pre id="response"></pre>
                             </p>
                         </form>
                     </div><!--form col-->
