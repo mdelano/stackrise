@@ -396,9 +396,6 @@ h2.slide-btm-text{
     font-weight: 400;
 }
 /***our services****/
-#services{
-    background: url('../img/sebasco-lonely-grey.jpg');
-}
 .service-icon i{
     width:70px;
     height: 70px;
