@@ -413,6 +413,13 @@ h2.slide-btm-text{
     font-size: 24px;
     font-weight: 100;
 }
+
+.service-info h3 {
+    color:#f1c40f;
+    font-size: 18px;
+    font-weight: 100;
+}
+
 .service-info p{
     color:#fff;
     font-weight: 300;
