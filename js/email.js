@@ -63,9 +63,8 @@ function sendTheMail(from_email, from_name, text) {
     params.message.from_name = from_name;
     params.message.text = text + " " + from_email;
     m.messages.send(params, function(){
-        $("#inquiry-response").html("Thanks for your email! We'll get right back to you ;)");
-
+        $("#inquiry-form").append('<pre id=\"inquiry-response">Thanks for your email! We\'ll get right back to you ;)</pre>');
     }, function(){
-        $("#inquiry-response").html("Looks like there was a problem sending an email to the stackrise team.");
+        $("#inquiry-form").append('<pre id=\"inquiry-response">Looks like there was a problem sending an email to the stackrise team.</pre>');
     });
 }
